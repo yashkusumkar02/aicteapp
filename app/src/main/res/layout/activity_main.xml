@@ -5,40 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:id="@+id/drawerlayout"
+    android:fitsSystemWindows="true"
     tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationView"
+        app:headerLayout="@layout/activity_header_menu"
+        android:layout_gravity="start"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient_i"
+        android:background="@drawable/background_gradient"
         android:orientation="vertical">
 
-
-        <RelativeLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_menu" />
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:padding="5dp"
-                android:src="@drawable/ic_baseline_add_24" />
-
-        </RelativeLayout>
+            android:minHeight="?attr/actionBarSize"
+            android:background="#0000"
+            app:navigationIcon="@drawable/menu_icon"
+            tools:ignore="MissingConstraints" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none">
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,7 +45,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingTop="20dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -61,8 +59,8 @@
                             android:layout_centerHorizontal="true"
                             android:fontFamily="@font/bg_black"
                             android:text="Home"
-                            android:textColor="@color/white"
-                            android:textSize="24sp" />
+                            android:textColor="#8B8B8B"
+                            android:textSize="30sp" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -72,7 +70,7 @@
                             android:layout_marginTop="20dp"
                             android:layout_marginRight="40dp"
                             android:layout_marginBottom="20dp"
-                            android:background="@drawable/gradient_i"
+                            android:background="@drawable/gradient_image_background"
                             android:elevation="10dp">
 
                             <TextView
@@ -131,7 +129,7 @@
                                 android:fontFamily="@font/andika_new_basic_bold"
                                 android:text="Portal"
                                 android:textAlignment="center"
-                                android:textColor="@color/white" />
+                                android:textColor="#FF8B8B8B" />
 
 
                         </LinearLayout>
@@ -166,7 +164,7 @@
                                 android:fontFamily="@font/andika_new_basic_bold"
                                 android:text="Parakh"
                                 android:textAlignment="center"
-                                android:textColor="@color/white" />
+                                android:textColor="#FF8B8B8B" />
 
 
                         </LinearLayout>
@@ -201,12 +199,13 @@
                                 android:fontFamily="@font/andika_new_basic_bold"
                                 android:text="Colleges"
                                 android:textAlignment="center"
-                                android:textColor="@color/white" />
+                                android:textColor="#FF8B8B8B" />
                         </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
+
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -238,20 +237,226 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Eminent and Unforgettables"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
-                    android:textColor="@color/white"
                     android:fontFamily="@font/andika_new_basic_bold"
-                    android:textSize="20sp"/>
+                    android:text="Initiatives &amp; Schemes"
+                    android:textColor="#FF8B8B8B"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:elevation="8dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@drawable/round_bk2"
+                        android:elevation="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bg_black"
+                            android:padding="20dp"
+                            android:text="National e-Scholarship"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:paddingTop="25dp"
+                            android:paddingRight="30dp"
+                            android:text="National e-Scholarship is the one-stop \nsolution to help students seek various \nscholarships." />
+
+                        <Button
+                            android:id="@+id/learn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#0000"
+                            android:padding="20dp"
+                            android:text="Learn More"
+                            android:textAllCaps="false" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/b1" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/round_bk5"
+                        android:elevation="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bg_black"
+                            android:padding="20dp"
+                            android:text="Vidya Lakshmi"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:paddingTop="25dp"
+                            android:paddingRight="30dp"
+                            android:text="Vidya Lakshmi is a first-of-its-kind portal for \n students seeking educational loan." />
+
+                        <Button
+                            android:id="@+id/learn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#0000"
+                            android:padding="20dp"
+                            android:text="Learn More"
+                            android:textAllCaps="false" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/b2" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/round_bk1"
+                        android:elevation="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bg_black"
+                            android:padding="20dp"
+                            android:text="Pragati and Saksham"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:paddingTop="25dp"
+                            android:paddingRight="30dp"
+                            android:text="Scholarship for girls under the Pragati Scheme \nand scholarship for differently-abled students \nunder Saksham Scheme." />
+
+                        <Button
+                            android:id="@+id/learn3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#0000"
+                            android:padding="20dp"
+                            android:text="Learn More"
+                            android:textAllCaps="false" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/b3" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/round_bk4"
+                        android:elevation="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bg_black"
+                            android:padding="20dp"
+                            android:text="India Innovation Initiative"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:paddingTop="25dp"
+                            android:paddingRight="30dp"
+                            android:text="India's largest innovation challenges jointly \npromoted by the CII and Department of \nScience &amp; Technology." />
+
+                        <Button
+                            android:id="@+id/learn4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#0000"
+                            android:padding="20dp"
+                            android:text="Learn More"
+                            android:textAllCaps="false" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/b4" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:fontFamily="@font/andika_new_basic_bold"
+                    android:text="Eminent and Unforgettables"
+                    android:textColor="#FF8B8B8B"
+                    android:textSize="25sp" />
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="380dp"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="12dp"
-                    android:paddingBottom="50dp"
+                    android:layout_width="360dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="18dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="8dp">
 
@@ -262,8 +467,8 @@
 
                         <com.denzcoskun.imageslider.ImageSlider
                             android:id="@+id/image_slider2"
-                            android:layout_width="380dp"
-                            android:layout_height="180dp"
+                            android:layout_width="360dp"
+                            android:layout_height="160dp"
                             app:iss_auto_cycle="true"
                             app:iss_corner_radius="30"
                             app:iss_delay="1000"
@@ -272,7 +477,55 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="490dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/food_back">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="26dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/bg_black"
+                            android:text="Copyright © 2017. AICTE \nNelson Mandela Marg, Vasant Kunj,\nNew Delhi -110070"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/facebook"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="180dp"
+                            android:src="@drawable/facebook" />
+
+                        <ImageView
+                            android:id="@+id/twitter"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="140dp"
+                            android:src="@drawable/twitter" />
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
             </LinearLayout>
+
 
         </ScrollView>
 

@@ -1,21 +1,34 @@
 package com.example.aicte;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.appcompat.widget.Toolbar;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.navigation.NavigationView;
+import com.yarolegovich.slidingrootnav.SlidingRootNav;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,15 +38,82 @@ public class MainActivity extends AppCompatActivity {
     private ImageSlider imageSlider,imageSlider2;
 
     TextView textView1,textView2,textView3;
-    ImageView imageView1,imageView2,imageView3;
+    ImageView imageView1,imageView2,imageView3,facebook,twitter;
 
+    Button btn1,btn2,btn3,btn4;
 
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
+        drawerLayout=findViewById(R.id.drawerlayout);
+        navigationView=findViewById(R.id.navigationView);
+        toolbar=findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+
+        ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.menu_Open,R.string.mnu_Close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+
+        facebook=findViewById(R.id.facebook);
+        twitter=findViewById(R.id.twitter);
+
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.facebook.com/OfficialAICTE/");
+            }
+        });
+
+        twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://twitter.com/AICTE_INDIA");
+            }
+        });
+
+        btn1=findViewById(R.id.learn1);
+        btn2=findViewById(R.id.learn2);
+        btn3=findViewById(R.id.learn3);
+        btn4=findViewById(R.id.learn4);
+
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("http://scholarships.gov.in/");
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("http://scholarships.gov.in/");
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.aicte-india.org/schemes/students-development-schemes");
+            }
+        });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("http://www.ciiinnovation.in/");
+            }
+        });
 
         imageSlider=findViewById(R.id.image_slider);
         imageSlider2=findViewById(R.id.image_slider2);
@@ -131,8 +211,27 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
+    private void gotoUrl(String s) {
+        Uri uri=Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+    }
+
     private void goLink(String s) {
         Uri uri=Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else{
+
+            super.onBackPressed();
+        }
     }
 }

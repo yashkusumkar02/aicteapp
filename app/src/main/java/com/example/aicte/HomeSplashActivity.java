@@ -17,20 +17,13 @@ public class HomeSplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_splash);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         button1=findViewById(R.id.button);
         button2=findViewById(R.id.button2);
         button3=findViewById(R.id.button3);
         skip=findViewById(R.id.skip_btn);
-
-        skip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeSplashActivity.this,MainActivity.class));
-            }
-        });
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +45,14 @@ public class HomeSplashActivity extends AppCompatActivity {
                 goLink("https://css.aicte-india.org/login");
             }
         });
+
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeSplashActivity.this,MainActivity.class));
+            }
+        });
+
     }
 
     private void goLink(String s) {
