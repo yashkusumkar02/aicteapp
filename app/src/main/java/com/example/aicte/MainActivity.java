@@ -15,6 +15,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -33,7 +34,7 @@ import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private ImageSlider imageSlider,imageSlider2;
 
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     Toolbar toolbar;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,12 +59,14 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout=findViewById(R.id.drawerlayout);
         navigationView=findViewById(R.id.navigationView);
         toolbar=findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
-
+        navigationView.bringToFront();
         ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.menu_Open,R.string.mnu_Close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
+
 
 
         facebook=findViewById(R.id.facebook);
@@ -213,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     private void gotoUrl(String s) {
         Uri uri=Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
@@ -234,4 +240,19 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_home:
+                break;
+            case R.id.nav_abt_us:
+                Intent intent=new Intent(MainActivity.this,About_us.class);
+                startActivity(intent);
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
 }

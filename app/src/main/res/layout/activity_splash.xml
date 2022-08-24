@@ -23,13 +23,12 @@
         android:typeface="serif" />
 
     <ImageView
-
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="10dp"
         android:padding="80dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/aicte" />
+        android:src="@drawable/aicte"/>
 
     <ProgressBar
         android:id="@+id/power"
@@ -56,6 +55,7 @@
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="15sp"
         android:textStyle="normal" />
+
 
 
 </LinearLayout>

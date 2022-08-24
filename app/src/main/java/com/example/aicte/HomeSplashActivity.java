@@ -53,6 +53,7 @@ public class HomeSplashActivity extends AppCompatActivity {
             }
         });
 
+
     }
 
     private void goLink(String s) {

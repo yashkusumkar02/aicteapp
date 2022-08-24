@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient"
+    tools:context=".About_us">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/back_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/card_view_abtus"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            android:layout_margin="30dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/history_image"
+                android:background="@drawable/abt_us"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/home_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/bg_black"
+                    android:text="About Us"
+                    android:textColor="#8B8B8B"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="The beginning of formal technical education in India can be dated back to the mid-19th century. Major policy initiatives in the pre-independence period included the appointment of the Indian Universities Commission in 1902, issue of the Indian Education Policy Resolution in 1904, and the Governor General’s policy statement of 1913 stressing the importance of technical education, the establishment of IISc in Bangalore, Institute for Sugar, Textile &amp; Leather Technology in Kanpur, N.C.E. in Bengal in 1905, and industrial schools in several provinces."
+                    android:textColor="#6B6B6B"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:fontFamily="@font/bg_bold_italic"
+                android:text="Initial Set-up"
+                android:textColor="#005aaa"
+                android:layout_margin="20dp"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="All India Council for Technical Education (AICTE) was set up in November 1945 as a national-level apex advisory body to conduct a survey on the facilities available for technical education and to promote development in the country in a coordinated and integrated manner. And to ensure the same, as stipulated in the National Policy of Education (1986), AICTE was vested with:"
+                android:textColor="#6B6B6B"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="• Statutory authority for planning, formulation, and maintenance of norms &amp; standards
+\n• Quality assurance through accreditation
+\n• Funding in priority areas, monitoring, and evaluation
+\n• Maintaining parity of certification &amp; awards
+\n• The management of technical education in the country"
+                android:textColor="#6B6B6B" />
+            
+            
+        </LinearLayout>
+
+             <androidx.cardview.widget.CardView
+                 android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:background="#0000"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                 tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="300dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="300dp"
+                android:src="@drawable/about_history" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="203dp"
+            android:layout_height="300dp"
+            app:cardCornerRadius="12dp"
+            android:layout_gravity="right">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:text="Role of National Working Group"
+                android:textSize="15sp"
+                android:fontFamily="@font/andika_new_basic_bold"
+                android:textColor="#005aaa"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_height="250dp"
+                android:layout_width="200dp"
+                android:height="300dp"
+                android:layout_marginTop="30dp"
+                android:textSize="10sp"
+                android:text="The Government of India (the Ministry of Human Resource Development) also constituted a National Working Group to look into the role of AICTE in the context of proliferation of technical institutions, maintenance of standards, and other related matters. The Working Group recommended that AICTE be vested with the necessary statutory authority for making it more effective, which would consequently require restructuring and strengthening with the necessary infrastructure and operating mechanisms."/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="90dp"
+                android:text="The All India Council For Technical Education Act 1987"
+                android:layout_marginTop="150dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/andika_new_basic_bold"
+                android:textColor="#005aaa"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="190dp"
+                android:layout_marginLeft="2dp"
+                android:text="(No 52 of 1987 as passed by both the Houses of Parliament) The AICTE Act was constituted to provide for the establishment of an All India Council for Technical Education with a view to proper planning and co-ordinated development of a technical education system throughout the country, the promotion of qualitative improvements of such education in relation to planned quantitative growth, and regulation &amp; proper maintenance of norms and standards in the technical education system and for the matters connected therewith."
+                android:textSize="10sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/food_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/bg_black"
+                    android:text="Copyright © 2017. AICTE \nNelson Mandela Marg, Vasant Kunj,\nNew Delhi -110070"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="140dp"
+                    android:src="@drawable/facebook" />
+
+                <ImageView
+                    android:id="@+id/twitter"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="100dp"
+                    android:src="@drawable/twitter" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
