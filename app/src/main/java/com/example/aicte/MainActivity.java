@@ -22,6 +22,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 
@@ -38,10 +39,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private ImageSlider imageSlider,imageSlider2;
 
-    TextView textView1,textView2,textView3;
-    ImageView imageView1,imageView2,imageView3,facebook,twitter;
+    TextView textView1,textView2,textView3,text1,text2,text3,text4,text5,text6,text7,text8,women1,women2,facilities,facilities1,research1,research2;
+    ImageView imageView1,imageView2,imageView3,facebook,twitter,website,image1,image2,image3,image4;
 
-    Button btn1,btn2,btn3,btn4;
+    Button button1, button2,button3,skip;
+
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -55,6 +57,183 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        button1=findViewById(R.id.button);
+        button2=findViewById(R.id.button2);
+        button3=findViewById(R.id.button3);
+
+        text1=findViewById(R.id.text_one);
+        text2=findViewById(R.id.text_one1);
+        text3=findViewById(R.id.text_two);
+        text4=findViewById(R.id.text_two2);
+        text5=findViewById(R.id.text_three);
+        text6=findViewById(R.id.text_three3);
+        text7=findViewById(R.id.text_four);
+        text8=findViewById(R.id.text_four4);
+        women1=findViewById(R.id.women);
+        women2=findViewById(R.id.women1);
+        facilities=findViewById(R.id.facili);
+        facilities1=findViewById(R.id.facili1);
+        research1=findViewById(R.id.research);
+        research2=findViewById(R.id.research1);
+
+        image1=findViewById(R.id.image_one);
+        image2=findViewById(R.id.image_two);
+        image3=findViewById(R.id.image_three);
+        image4=findViewById(R.id.image_four);
+
+        text1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("http://scholarships.gov.in/");
+            }
+        });
+
+        text2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("http://scholarships.gov.in/");
+
+            }
+        });
+
+        text3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.vidyalakshmi.co.in/Students/indexPopup");
+
+            }
+        });
+
+        text4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.vidyalakshmi.co.in/Students/indexPopup");
+
+            }
+        });
+
+        text5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-india.org/schemes/students-development-schemes");
+
+            }
+        });
+
+        text6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-india.org/schemes/students-development-schemes");
+
+            }
+        });
+
+        text7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("http://www.ciiinnovation.in/");
+
+            }
+        });
+
+        text8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("http://www.ciiinnovation.in/");
+
+            }
+        });
+        women1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-india.org/opportunities/students/facilites");
+            }
+        });
+        women2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-india.org/opportunities/students/facilites");
+            }
+        });
+        facilities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-india.org/opportunities/students/facilities-differently-abled");
+            }
+        });
+        facilities1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-india.org/opportunities/students/facilities-differently-abled");
+            }
+        });
+        research1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-india.org/opportunities/students/research-funds");
+            }
+        });
+        research2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-india.org/opportunities/students/research-funds");
+            }
+        });
+
+        image1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("http://scholarships.gov.in/");
+
+            }
+        });
+
+        image2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.vidyalakshmi.co.in/Students/indexPopup");
+
+            }
+        });
+
+        image3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-india.org/schemes/students-development-schemes");
+
+            }
+        });
+
+        image4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("http://www.ciiinnovation.in/");
+
+            }
+        });
+
+
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://www.aicte-jk-scholarship-gov.in/");
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://facilities.aicte-india.org/pgdm/");
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goLink("https://css.aicte-india.org/login");
+            }
+        });
 
         drawerLayout=findViewById(R.id.drawerlayout);
         navigationView=findViewById(R.id.navigationView);
@@ -71,6 +250,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         facebook=findViewById(R.id.facebook);
         twitter=findViewById(R.id.twitter);
+        website=findViewById(R.id.website_icon);
 
         facebook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,40 +265,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 gotoUrl("https://twitter.com/AICTE_INDIA");
             }
         });
-
-        btn1=findViewById(R.id.learn1);
-        btn2=findViewById(R.id.learn2);
-        btn3=findViewById(R.id.learn3);
-        btn4=findViewById(R.id.learn4);
-
-
-        btn1.setOnClickListener(new View.OnClickListener() {
+        website.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("http://scholarships.gov.in/");
+                gotoUrl("https://www.aicte-india.org/");
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("http://scholarships.gov.in/");
-            }
-        });
 
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("https://www.aicte-india.org/schemes/students-development-schemes");
-            }
-        });
-
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoUrl("http://www.ciiinnovation.in/");
-            }
-        });
 
         imageSlider=findViewById(R.id.image_slider);
         imageSlider2=findViewById(R.id.image_slider2);

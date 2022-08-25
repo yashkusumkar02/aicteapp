@@ -5,39 +5,43 @@
 
         <item android:id="@+id/nav_home"
             android:title="Home"
-            android:icon="@drawable/ic_home"/>
+            android:icon="@drawable/home"/>
 
         <item android:id="@+id/nav_abt_us"
             android:title="About Us"
-            android:icon="@drawable/ic_about_us"/>
+            android:icon="@drawable/about_us"/>
+
+        <item android:id="@+id/nav_newsroom"
+            android:title="NewsRoom"
+            android:icon="@drawable/newsroom"/>
 
         <item android:id="@+id/nav_bureaus"
             android:title="Bureaus"
-            android:icon="@drawable/beauros_cate1"/>
+            android:icon="@drawable/enterprise"/>
 
         <item android:id="@+id/nav_initiatives"
             android:title="Initiatives"
-            android:icon="@drawable/ic_initi"/>
+            android:icon="@drawable/initi"/>
 
         <item android:id="@+id/nav_schemes"
             android:title="Schemes"
-            android:icon="@drawable/ic_schema"/>
+            android:icon="@drawable/schmes"/>
 
         <item android:id="@+id/nav_education"
             android:title="Education"
-            android:icon="@drawable/ic_edu"/>
+            android:icon="@drawable/education"/>
 
         <item android:id="@+id/nav_opportunities"
             android:title="Opportunities"
-            android:icon="@drawable/ic_oppor"/>
+            android:icon="@drawable/opportunity"/>
 
         <item android:id="@+id/nav_stati"
             android:title="Statistics"
-            android:icon="@drawable/ic_stati"/>
+            android:icon="@drawable/analysis"/>
 
         <item android:id="@+id/nav_bulletins"
             android:title="Bulletins"
-            android:icon="@drawable/ic_bullet"/>
+            android:icon="@drawable/bulletin"/>
 
     </group>
 

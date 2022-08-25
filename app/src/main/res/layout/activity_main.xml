@@ -9,15 +9,15 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/navigationView"
+        android:layout_gravity="start"
+        android:isScrollContainer="true"
         app:headerLayout="@layout/header_menu"
-        app:menu="@menu/main_menu"
-        android:layout_gravity="start"/>
-
+        app:itemIconTint="@color/card1"
+        app:menu="@menu/main_menu" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -96,6 +96,57 @@
 
                     </RelativeLayout>
 
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/custom_button"
+                            android:text="PMSSS Registration 2022-23"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+                            app:layout_constraintEnd_toStartOf="@+id/button2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/custom_button"
+                            android:text="PGDM Student Verification"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/button"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/button3"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/custom_button"
+                            android:text="Centralized Support System"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.498"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -173,6 +224,8 @@
                         </LinearLayout>
 
 
+
+
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -231,8 +284,8 @@
                             android:layout_height="200dp"
                             app:iss_auto_cycle="true"
                             app:iss_corner_radius="30"
-                            app:iss_delay="1000"
-                            app:iss_period="1000" />
+                            app:iss_delay="2500"
+                            app:iss_period="2500" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -256,11 +309,12 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="120dp"
                         android:background="@drawable/round_bk2"
                         android:elevation="8dp">
 
                         <TextView
+                            android:id="@+id/text_one"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/bg_black"
@@ -269,6 +323,7 @@
                             android:textSize="18sp" />
 
                         <TextView
+                            android:id="@+id/text_one1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
@@ -279,82 +334,66 @@
                             android:paddingRight="30dp"
                             android:text="National e-Scholarship is the one-stop \nsolution to help students seek various \nscholarships." />
 
-                        <Button
-                            android:id="@+id/learn1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:background="#0000"
-                            android:padding="20dp"
-                            android:text="Learn More"
-                            android:textAllCaps="false" />
-
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
+                            android:id="@+id/image_one"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:layout_alignParentRight="true"
                             android:layout_marginTop="30dp"
                             android:layout_marginRight="8dp"
                             android:src="@drawable/b1" />
 
-
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/round_bk5"
-                        android:elevation="8dp">
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/round_bk5"
+                            android:elevation="8dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/bg_black"
-                            android:padding="20dp"
-                            android:text="Vidya Lakshmi"
-                            android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/text_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bg_black"
+                                android:padding="20dp"
+                                android:text="Vidya Lakshmi"
+                                android:textSize="18sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_marginBottom="20dp"
-                            android:paddingTop="25dp"
-                            android:paddingRight="30dp"
-                            android:text="Vidya Lakshmi is a first-of-its-kind portal for \n students seeking educational loan." />
+                            <TextView
+                                android:id="@+id/text_two2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:paddingTop="25dp"
+                                android:paddingRight="30dp"
+                                android:text="Vidya Lakshmi is a first-of-its-kind portal for \n students seeking educational loan." />
 
-                        <Button
-                            android:id="@+id/learn2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:background="#0000"
-                            android:padding="20dp"
-                            android:text="Learn More"
-                            android:textAllCaps="false" />
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_marginTop="30dp"
-                            android:layout_marginRight="8dp"
-                            android:src="@drawable/b2" />
+                            <ImageView
+                                android:id="@+id/image_two"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/b2" />
 
 
-                    </RelativeLayout>
+                        </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="120dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/round_bk1"
                         android:elevation="8dp">
 
                         <TextView
+                            android:id="@+id/text_three"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/bg_black"
@@ -363,6 +402,7 @@
                             android:textSize="18sp" />
 
                         <TextView
+                            android:id="@+id/text_three3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
@@ -373,19 +413,10 @@
                             android:paddingRight="30dp"
                             android:text="Scholarship for girls under the Pragati Scheme \nand scholarship for differently-abled students \nunder Saksham Scheme." />
 
-                        <Button
-                            android:id="@+id/learn3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:background="#0000"
-                            android:padding="20dp"
-                            android:text="Learn More"
-                            android:textAllCaps="false" />
-
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
+                            android:id="@+id/image_three"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:layout_alignParentRight="true"
                             android:layout_marginTop="30dp"
                             android:layout_marginRight="8dp"
@@ -396,12 +427,13 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="120dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/round_bk4"
                         android:elevation="8dp">
 
                         <TextView
+                            android:id="@+id/text_four"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/bg_black"
@@ -410,6 +442,7 @@
                             android:textSize="18sp" />
 
                         <TextView
+                            android:id="@+id/text_four4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
@@ -420,29 +453,119 @@
                             android:paddingRight="30dp"
                             android:text="India's largest innovation challenges jointly \npromoted by the CII and Department of \nScience &amp; Technology." />
 
-                        <Button
-                            android:id="@+id/learn4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:background="#0000"
-                            android:padding="20dp"
-                            android:text="Learn More"
-                            android:textAllCaps="false" />
-
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
+                            android:id="@+id/image_four"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:layout_alignParentRight="true"
                             android:layout_marginTop="30dp"
                             android:layout_marginRight="8dp"
                             android:src="@drawable/b4" />
 
 
+
                     </RelativeLayout>
 
-
                 </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:elevation="8dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@drawable/one1"
+                    android:elevation="8dp">
+
+                    <TextView
+                        android:id="@+id/women"
+                        android:layout_width="230dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/bg_black"
+                        android:text="Women Empowerment"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/women1"
+                        android:layout_width="230dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="55dp"
+                        android:text="Learn About AICTE's contribution towards the  socio-economic development of women through various women-oriented programmes."
+                        android:textColor="#FFFFFF" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@drawable/one2"
+                    android:elevation="8dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/facili"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/bg_black"
+                        android:text="Facilities for Differently Abled"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/facili1"
+                        android:layout_width="230dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="55dp"
+                        android:text="Creating awareness in the higher education system and providing necessary guidance &amp; counselling to differently-abled people."
+                        android:textColor="#FFFFFF" />
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@drawable/one3"
+                    android:elevation="8dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/research"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/bg_black"
+                        android:text="Research Funds"
+                        android:textSize="23sp" />
+
+                    <TextView
+                        android:id="@+id/research1"
+                        android:layout_width="230dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="55dp"
+                        android:text="Explore various India-centric and other research funds and the way to avail of them."
+                        android:textColor="#FFFFFF" />
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -474,8 +597,8 @@
                             android:layout_height="160dp"
                             app:iss_auto_cycle="true"
                             app:iss_corner_radius="30"
-                            app:iss_delay="1000"
-                            app:iss_period="1000" />
+                            app:iss_delay="2500"
+                            app:iss_period="2500" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -486,7 +609,7 @@
                     android:layout_marginTop="20dp">
 
                     <RelativeLayout
-                        android:layout_width="490dp"
+                        android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/food_back">
@@ -509,7 +632,7 @@
                             android:layout_height="30dp"
                             android:layout_alignParentRight="true"
                             android:layout_marginTop="40dp"
-                            android:layout_marginRight="180dp"
+                            android:layout_marginRight="150dp"
                             android:src="@drawable/facebook" />
 
                         <ImageView
@@ -518,13 +641,24 @@
                             android:layout_height="32dp"
                             android:layout_alignParentRight="true"
                             android:layout_marginTop="40dp"
-                            android:layout_marginRight="140dp"
+                            android:layout_marginRight="110dp"
                             android:src="@drawable/twitter" />
+
+                        <ImageView
+                            android:id="@+id/website_icon"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginRight="70dp"
+                            android:src="@drawable/website" />
 
                     </RelativeLayout>
 
 
                 </androidx.cardview.widget.CardView>
+
+
 
 
             </LinearLayout>
