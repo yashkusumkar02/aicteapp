@@ -11,20 +11,23 @@
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/card_1.xml" value="0.213" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/card_2.xml" value="0.183" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/card_3.xml" value="0.183" />
-        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/custom_button.xml" value="0.213" />
+        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/custom_button.xml" value="0.1775" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/custom_button_skip.xml" value="0.213" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/ic_attributes.xml" value="0.183" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.183" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/ic_menu.xml" value="0.183" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/search_icon.xml" value="0.2405" />
-        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_header_menu.xml" value="0.2734375" />
-        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_home_splash.xml" value="0.22445489525438223" />
-        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_main.xml" value="0.2692307692307692" />
+        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/drawable/tiya_siddhi.xml" value="0.2535" />
+        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_about_us.xml" value="0.15384615384615385" />
+        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_header_menu.xml" value="0.18888888888888888" />
+        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_home_splash.xml" value="0.16148648648648647" />
+        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_main.xml" value="0.16148648648648647" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_slider_aicte.xml" value="0.24895833333333334" />
-        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_splash.xml" value="0.22435897435897437" />
+        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/activity_splash.xml" value="0.16148648648648647" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/announcement_card_design.xml" value="0.20436083796494228" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/categories_card_design.xml" value="0.536" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/drawer_menu.xml" value="0.22359982898674646" />
+        <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/fragment_home_fragmenet.xml" value="0.2734375" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/fragment_image_flipper.xml" value="0.10885416666666667" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/header_menu.xml" value="0.2692307692307692" />
         <entry key="..\:/Users/DELL/AICTE/app/src/main/res/layout/home_splash_activity.xml" value="0.24895833333333334" />
