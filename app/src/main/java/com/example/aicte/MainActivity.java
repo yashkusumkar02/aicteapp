@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ImageSlider imageSlider,imageSlider2;
 
     TextView textView1,textView2,textView3,text1,text2,text3,text4,text5,text6,text7,text8,women1,women2,facilities,facilities1,research1,research2;
-    ImageView imageView1,imageView2,imageView3,facebook,twitter,website,image1,image2,image3,image4;
+    ImageView imageView1,imageView2,imageView3,facebook,twitter,website,image1,image2,image3,image4,dashboard;
 
     Button button1, button2,button3,skip;
 
@@ -60,6 +60,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         button1=findViewById(R.id.button);
         button2=findViewById(R.id.button2);
         button3=findViewById(R.id.button3);
+
+        dashboard=findViewById(R.id.gotoDashboardmain);
+
+        dashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,DashboardScreen.class));
+                finish();
+            }
+        });
 
         text1=findViewById(R.id.text_one);
         text2=findViewById(R.id.text_one1);

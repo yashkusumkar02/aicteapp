@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background_gradient"
-    tools:context=".DashboardScreen">
+    tools:context=".Dashboard">
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true">
 
         <RelativeLayout
@@ -35,10 +35,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="130dp"
+                    android:layout_marginLeft="70dp"
                     android:fontFamily="@font/dm_sans_bold"
                     android:gravity="center"
-                    android:text="Dashboard"
+                    android:text="Aicte Login Portal"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
@@ -49,14 +49,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="250dp"
+                android:layout_marginTop="300dp"
                 android:layout_marginRight="10dp"
                 android:orientation="vertical"
                 android:gravity="center">
 
-
                 <LinearLayout
-                    android:layout_width="180dp"
+                    android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:orientation="horizontal">
 
@@ -73,25 +72,65 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/static_links"
+                                android:id="@+id/studentlogin"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/analytics" />
+                                android:src="@drawable/student" />
 
                             <TextView
-                                android:id="@+id/text_statistics_link"
+                                android:id="@+id/student_text_login"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/static_links"
+                                android:layout_below="@id/studentlogin"
                                 android:layout_centerInParent="true"
                                 android:fontFamily="@font/bg_black"
-                                android:text="Statistics Dashboard"
+                                android:text="Student Login"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
                             <Button
-                                android:id="@+id/statistics_btn"
+                                android:id="@+id/studlogin_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#0000" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/faculty_login"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/faculty" />
+
+                            <TextView
+                                android:id="@+id/text_faculty_login"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/faculty_login"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/bg_black"
+                                android:text="Faculty Login"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/faculty_btn"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="#0000" />
@@ -102,11 +141,11 @@
 
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:orientation="horizontal"
-                    android:layout_margin="10dp">
+                    android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="0dp"
@@ -121,25 +160,25 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/quick_links"
+                                android:id="@+id/collegelogin"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/link" />
+                                android:src="@drawable/college" />
 
                             <TextView
-                                android:id="@+id/text_quick_link"
+                                android:id="@+id/college_login"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/quick_links"
+                                android:layout_below="@id/collegelogin"
                                 android:layout_centerInParent="true"
                                 android:fontFamily="@font/bg_black"
-                                android:text="Quick Links"
+                                android:text="College Login"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
                             <Button
-                                android:id="@+id/quicklink_btn"
+                                android:id="@+id/collegelogin_btn"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="#0000" />
@@ -161,25 +200,25 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/announcement_links"
+                                android:id="@+id/university_login"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/announcement" />
+                                android:src="@drawable/university" />
 
                             <TextView
-                                android:id="@+id/text_announcement_link"
+                                android:id="@+id/text_university_login"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/announcement_links"
+                                android:layout_below="@id/university_login"
                                 android:layout_centerInParent="true"
                                 android:fontFamily="@font/bg_black"
-                                android:text="Announcement"
+                                android:text="University Login"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
                             <Button
-                                android:id="@+id/announcement_btn"
+                                android:id="@+id/university_btn"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="#0000" />
@@ -187,93 +226,6 @@
                         </RelativeLayout>
 
                     </androidx.cardview.widget.CardView>
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    android:orientation="horizontal"
-                    android:layout_margin="10dp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="0dp"
-                        android:layout_height="160dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="1"
-                        app:cardCornerRadius="20dp">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <ImageView
-                                android:id="@+id/mainacivity_links"
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/home_activity" />
-
-                            <TextView
-                                android:id="@+id/text_mainacitvity_link"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/mainacivity_links"
-                                android:layout_centerInParent="true"
-                                android:fontFamily="@font/bg_black"
-                                android:text="Home"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
-
-                            <Button
-                                android:id="@+id/mainactivity_btn"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="#0000" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="160dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/login_image"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/login" />
-
-                        <TextView
-                            android:id="@+id/login_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/login_image"
-                            android:layout_centerInParent="true"
-                            android:fontFamily="@font/bg_black"
-                            android:text="Login"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/login_page_btn"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#0000" />
-
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
 
 
                 </LinearLayout>

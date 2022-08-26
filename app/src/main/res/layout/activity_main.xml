@@ -25,6 +25,11 @@
         android:background="@drawable/background_gradient"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -32,7 +37,19 @@
             android:minHeight="?attr/actionBarSize"
             android:background="#0000"
             app:navigationIcon="@drawable/menu_icon"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/gotoDashboardmain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_baseline_dashboard_24" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"

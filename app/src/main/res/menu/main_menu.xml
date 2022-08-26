@@ -45,5 +45,13 @@
 
     </group>
 
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/darktheme"
+            android:title="Dark Theme"
+            android:icon="@drawable/brightness"/>
+
+    </group>
+
 
 </menu>
