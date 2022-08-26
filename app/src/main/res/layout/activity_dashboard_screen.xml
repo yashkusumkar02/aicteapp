@@ -56,9 +56,10 @@
 
 
                 <LinearLayout
-                    android:layout_width="180dp"
+                    android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="0dp"
@@ -99,6 +100,46 @@
                         </RelativeLayout>
 
                     </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/approved_image"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/checked" />
+
+                            <TextView
+                                android:id="@+id/approved_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/approved_image"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/bg_black"
+                                android:text="Approved Colleges"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/approved_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#0000" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
 
 
                 </LinearLayout>

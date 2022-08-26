@@ -38,6 +38,7 @@
             android:layout_marginTop="40dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_full_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Full Name"
@@ -59,6 +60,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Username"
@@ -80,6 +82,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
@@ -101,6 +104,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone Number"
@@ -121,7 +125,9 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUp_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
@@ -148,9 +154,10 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/next_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:text="Sign Up"
             android:background="@drawable/btn_skip"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"

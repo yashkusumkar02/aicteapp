@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Dashboard extends AppCompatActivity {
-    ImageView img1,img2,imge3,imge4;
+    ImageView img1,img2,imge3,imge4,dashdash;
     TextView txt1,txt2,txt3,txt4;
     Button btn1,btn2,btn3,btn4;
 
@@ -22,6 +22,7 @@ public class Dashboard extends AppCompatActivity {
         img2=findViewById(R.id.faculty_login);
         imge3=findViewById(R.id.collegelogin);
         imge4=findViewById(R.id.university_login);
+        dashdash=findViewById(R.id.dashboardtodashboard);
 
         txt1=findViewById(R.id.student_text_login);
         txt2=findViewById(R.id.text_faculty_login);
@@ -32,6 +33,14 @@ public class Dashboard extends AppCompatActivity {
         btn2=findViewById(R.id.faculty_btn);
         btn3=findViewById(R.id.collegelogin_btn);
         btn4=findViewById(R.id.university_btn);
+
+        dashdash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Dashboard.this,DashboardScreen.class));
+                finish();
+            }
+        });
 
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
