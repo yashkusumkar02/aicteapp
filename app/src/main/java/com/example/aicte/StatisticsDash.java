@@ -33,63 +33,66 @@ public class StatisticsDash extends AppCompatActivity {
             setContentView(R.layout.activity_main);
 
 
-            pieChart = findViewById(R.id.activity_main_piechart);
-            setupPieChart();
-            loadPieChartData();
-        }
-
-        private void setupPieChart() {
-            pieChart.setDrawHoleEnabled(true);
-            pieChart.setUsePercentValues(false);
-            pieChart.setEntryLabelTextSize(12);
-            pieChart.setEntryLabelColor(Color.BLACK);
-            pieChart.setCenterText("Placement");
-            pieChart.setCenterTextSize(24);
-            pieChart.getDescription().setEnabled(false);
-
-            Legend l = pieChart.getLegend();
-            l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-            l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-            l.setOrientation(Legend.LegendOrientation.VERTICAL);
-            l.setDrawInside(false);
-            l.setEnabled(false);
-        }
-
-        private void loadPieChartData() {
-            ArrayList<PieEntry> entries = new ArrayList<>();
-            entries.add(new PieEntry(3458194f, "2012-2013"));
-            entries.add(new PieEntry(3724149, "2013-2014"));
-            entries.add(new PieEntry(3961610f, "2014-2015"));
-            entries.add(new PieEntry(3836421f, "2015-2016"));
-            entries.add(new PieEntry(3703158f, "2017-2018"));
-            entries.add(new PieEntry(3551957f, "2018-2019"));
-            entries.add(new PieEntry(3392521f, "2019-2020"));
-            entries.add(new PieEntry(3284835f, "2020-2021"));
-            entries.add(new PieEntry(2975577f, "2021-2022"));
-            entries.add(new PieEntry(3004199f, "2022-2023"));
-
-            ArrayList<Integer> colors = new ArrayList<>();
-            for (int color: ColorTemplate.VORDIPLOM_COLORS) {
-                colors.add(color);
+                pieChart = findViewById(R.id.activity_main_piechart);
+                setupPieChart();
+                loadPieChartData();
             }
 
-            for (int color: ColorTemplate.JOYFUL_COLORS) {
-                colors.add(color);
+            private void setupPieChart() {
+                pieChart.setDrawHoleEnabled(true);
+                pieChart.setUsePercentValues(false);
+                pieChart.setEntryLabelTextSize(12);
+                pieChart.setEntryLabelColor(Color.BLACK);
+                pieChart.setCenterText("Placement");
+                pieChart.setCenterTextSize(24);
+                pieChart.getDescription().setEnabled(false);
+
+                Legend l = pieChart.getLegend();
+                l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+                l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+                l.setOrientation(Legend.LegendOrientation.VERTICAL);
+                l.setDrawInside(false);
+                l.setEnabled(false);
             }
 
-            PieDataSet dataSet = new PieDataSet(entries, "_");
-            dataSet.setColors(colors);
+            private void loadPieChartData() {
+                ArrayList<PieEntry> entries = new ArrayList<>();
+                entries.add(new PieEntry(3458194f, "2012-2013"));
+                entries.add(new PieEntry(3724149, "2013-2014"));
+                entries.add(new PieEntry(3961610f, "2014-2015"));
+                entries.add(new PieEntry(3836421f, "2015-2016"));
+                entries.add(new PieEntry(3703158f, "2017-2018"));
+                entries.add(new PieEntry(3551957f, "2018-2019"));
+                entries.add(new PieEntry(3392521f, "2019-2020"));
+                entries.add(new PieEntry(3284835f, "2020-2021"));
+                entries.add(new PieEntry(2975577f, "2021-2022"));
+                entries.add(new PieEntry(3004199f, "2022-2023"));
 
-            PieData data = new PieData(dataSet);
-            data.setDrawValues(true);
-            data.setValueFormatter(new PercentFormatter(pieChart));
-            data.setValueTextSize(16f);
-            data.setValueTextColor(Color.BLACK);
+                ArrayList<Integer> colors = new ArrayList<>();
+                for (int color: ColorTemplate.VORDIPLOM_COLORS) {
+                    colors.add(color);
+                }
 
-            pieChart.setData(data);
-            pieChart.invalidate();
+                for (int color: ColorTemplate.JOYFUL_COLORS) {
+                    colors.add(color);
+                }
 
-            pieChart.animateY(1400, Easing.EaseInOutQuad);
+                PieDataSet dataSet = new PieDataSet(entries, "_");
+                dataSet.setColors(colors);
+
+                PieData data = new PieData(dataSet);
+                data.setDrawValues(true);
+                data.setValueFormatter(new PercentFormatter(pieChart));
+                data.setValueTextSize(16f);
+                data.setValueTextColor(Color.BLACK);
+
+                pieChart.setData(data);
+                pieChart.invalidate();
+
+                pieChart.animateY(1400, Easing.EaseInOutQuad);
+
+
+
 
         }
     }

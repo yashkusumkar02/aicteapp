@@ -4,25 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StatisticsDash">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="15dp"
-        android:layout_marginLeft="15dp">
-
-
-    <ImageView
-        android:id="@+id/gotodashbor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:src="@drawable/ic_back"/>
-
-    </LinearLayout>
+    tools:context=".MainActivity">
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/activity_main_piechart"
@@ -34,3 +16,4 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
